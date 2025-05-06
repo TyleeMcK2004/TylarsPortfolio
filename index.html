@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <meta name="description" content="A webpage dedicated to showing Tylar McKenzie's photography portfolio">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
+        
+        <!-- Rustic Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+      </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hey there, welcome to my little corner of the countryside!</h1>
+        <p>I'm Tylar — a photography lover, website design student, and someone who finds peace in the simple beauty of rural life.</p>
+        <p>This website is a glimpse into my world: from sleepy cows to curious cats, and a small family CBD business that means a lot to us.</p>
+        <img src="images/aime.jpeg" alt="Countryside Photography">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tylar McKenzie. All Rights Reserved.</p>
+    </footer>
+    <button id="topBtn" title="Back to Top">↑</button>
+    <script>
+        // Back to Top Button
+        let topBtn = document.getElementById("topBtn");
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+    
+        topBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html>

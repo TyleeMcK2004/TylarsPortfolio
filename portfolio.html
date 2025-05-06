@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tylar's Portfolio</title>
+        <meta name="description" content="A webpage dedicated to showing Tylar McKenzie's photography portfolio">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
+        
+        <!-- Rustic Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+      </head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="fade-in">
+    <h1>Some snapshots from my world 📷</h1>
+
+    <!-- Advertisement Section -->
+    <button class="accordion">Advertisements 📜</button>
+    <div class="panel">
+
+        <!-- 16:9 image -->
+        <img src="images/advertisement2.jpg" alt="Advertisement 2" class="large-image fade-in">
+
+        <!-- 1:1 images -->
+        <div class="portfolio-grid">
+            <img src="images/advertisement1.jpg" alt="Advertisement 1">
+            <img src="images/advertisement3.jpg" alt="Advertisement 3">
+        </div>
+    </div>
+
+    <!-- Cats Section -->
+    <button class="accordion">Cats 🐾</button>
+    <div class="panel">
+
+        <!-- 16:9 image -->
+        <img src="images/cat1.jpg" alt="Cat 1" class="large-image fade-in">
+
+        <!-- 1:1 images -->
+        <div class="portfolio-grid">
+            <img src="images/cat2.jpg" alt="Cat 2">
+            <img src="images/cat3.jpg" alt="Cat 3">
+            <img src="images/cat4.jpg" alt="Cat 4">
+        </div>
+    </div>
+
+    <!-- Cows Section -->
+    <button class="accordion">Cows 🐄</button>
+    <div class="panel">
+
+        <!-- 16:9 image -->
+        <img src="images/cow1.jpg" alt="Cow 1" class="large-image fade-in">
+
+        <!-- 1:1 images -->
+        <div class="portfolio-grid">
+            <img src="images/cow2.jpg" alt="Cow 2">
+            <img src="images/cow3.jpg" alt="Cow 3">
+            <img src="images/cow4.jpg" alt="Cow 4">
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Tylar McKenzie. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+        acc.addEventListener("click", function() {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    });
+</script>
+
+<button id="topBtn" title="Back to Top">↑</button>
+<script>
+    // Back to Top Button
+    let topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
+</body>
+</html>

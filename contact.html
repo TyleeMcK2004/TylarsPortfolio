@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <meta name="description" content="A webpage dedicated to showing Tylar McKenzie's photography portfolio">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
+        
+        <!-- Rustic Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+      </head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>Get in Touch!</h1>
+    <p>If you liked what you saw or just want to say hello, I'd love to hear from you!</p>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div style="margin-top:40px;">
+        <h2>Other Ways to Reach Me</h2>
+        <p>Phone: +44 07484 622588</p>
+        <p>Email: tylarmckenzie141004@hotmail.com</p>
+        <p>Facebook: <a href="https://facebook.com/tylarmckenzie" target="_blank" style="color: #7c5c42;">Tylar McKenzie</a></p>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Tylar McKenzie. All Rights Reserved.</p>
+</footer>
+<button id="topBtn" title="Back to Top">↑</button>
+<script>
+    // Back to Top Button
+    let topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
+</body>
+</html>

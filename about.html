@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <meta name="description" content="A webpage dedicated to showing Tylar McKenzie's photography portfolio">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
+        
+        <!-- Rustic Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+      </head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>A little bit about me...</h1>
+    <img src="images/personalpicture.jpg" alt="Personal Picture" style="max-width:300px;border-radius:50%;border:5px solid #7c5c42;display:block;margin:auto;">
+    <p>Hi! I'm Tylar, a 20-year-old website developer-in-training from the beautiful fields of Aberdeenshire, Scotland.</p>
+    <p>I grew up surrounded by rolling hills, muddy boots, and good-hearted people. Now I’m living in Glasgow, studying Graphic Media, but my love for the countryside never left.</p>
+    <p>Photography has been my way of capturing memories, feelings, and the occasional mischief of farm life. This portfolio is my personal journey, and I'm thrilled to share it with you.</p>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Tylar McKenzie. All Rights Reserved.</p>
+</footer>
+<button id="topBtn" title="Back to Top">↑</button>
+<script>
+    // Back to Top Button
+    let topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+</script>
+</body>
+</html>
